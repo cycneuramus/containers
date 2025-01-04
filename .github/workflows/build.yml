@@ -18,6 +18,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          # Fetch the current and previous commit to ensure `github.event.before` is available
+          fetch-depth: 2
 
       - name: Detect Applications to Build
         id: detect
