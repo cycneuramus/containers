@@ -1,4 +1,6 @@
-FROM caddy:2.8.4-builder AS builder
+ARG version=2.8.4
+
+FROM caddy:${version}-builder-alpine AS builder
 
 RUN xcaddy build \
 	--with github.com/caddy-dns/cloudflare \
@@ -7,5 +9,5 @@ RUN xcaddy build \
 	--with github.com/mholt/caddy-l4 \
 	--with github.com/sagikazarmark/caddy-fs-s3
 
-FROM caddy:2.8.4-alpine
+FROM caddy:${version}-alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
