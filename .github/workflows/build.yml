@@ -25,7 +25,7 @@ jobs:
       - name: Detect Applications to Build
         id: detect
         run: |
-          bash ./scripts/detect_apps.sh "${{ github.event.inputs.apps }}" "${{ github.event.before }}" "${{ github.sha }}"
+          bash .github/scripts/detect_apps.sh "${{ github.event.inputs.apps }}" "${{ github.event.before }}" "${{ github.sha }}"
         env:
           GITHUB_OUTPUT: $GITHUB_OUTPUT
 
@@ -52,4 +52,4 @@ jobs:
 
       - name: Build and Push Images
         run: |
-          bash ./scripts/build_and_push.sh "${{ needs.detect.outputs.apps_to_build }}"
+          bash .github/build_and_push.sh "${{ needs.detect.outputs.apps_to_build }}"

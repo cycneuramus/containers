@@ -6,4 +6,4 @@ New container builds for any given app are triggered by changes to the correspon
 
 `ghcr.io/cycneuramus/containers:<app-name>`
 
-See the [build workflow](https://github.com/cycneuramus/containers/blob/master/.github/workflows/build.yml) and [scripts](https://github.com/cycneuramus/containers/tree/master/scripts) for implementation details.
+See the [build workflow](https://github.com/cycneuramus/containers/blob/master/.github/workflows/build.yml) and [scripts](https://github.com/cycneuramus/containers/tree/master/.github/scripts) for implementation details.
