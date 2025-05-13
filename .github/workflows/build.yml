@@ -3,11 +3,11 @@ name: Build container images
 on:
   push:
     paths:
-      - '*/Dockerfile'
+      - "*/Dockerfile"
   workflow_dispatch:
     inputs:
       apps:
-        description: 'Comma-separated list of applications to build (e.g., caddy,patroni)'
+        description: "Comma-separated list of applications to build (e.g., caddy,patroni)"
         required: false
 
 jobs:
@@ -52,4 +52,4 @@ jobs:
 
       - name: Build and Push Images
         run: |
-          bash .github/build_and_push.sh "${{ needs.detect.outputs.apps_to_build }}"
+          bash .github/scripts/build_and_push.sh "${{ needs.detect.outputs.apps_to_build }}"
