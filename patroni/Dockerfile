@@ -1,4 +1,4 @@
-FROM tensorchord/pgvecto-rs:pg15-v0.3.0
+FROM ghcr.io/tensorchord/vchord-postgres:pg15-v0.3.0
 
 ARG USER=patroni
 ARG HOME_DIR=/home/$USER
