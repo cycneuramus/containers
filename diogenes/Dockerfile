@@ -7,7 +7,7 @@ ARG REPO=https://github.com/cycneuramus/diogenes
 ARG BRANCH=master
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    git make unzip \
+    git make unzip xz-utils \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/diogenes
