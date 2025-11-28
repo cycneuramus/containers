@@ -3,7 +3,7 @@ ARG IMG_VERSION=5.43.5-slim-trixie
 FROM docker.io/perl:${IMG_VERSION} AS build
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG REPO=https://github.com/pjheslin/diogenes
+ARG REPO=https://github.com/cycneuramus/diogenes
 ARG BRANCH=master
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
