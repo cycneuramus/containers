@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /opt/diogenes
 
 RUN git clone --depth 1 --branch "$BRANCH" "$REPO" . \
+    && make -f mk.prebuilt-data \
     && make
 
 FROM perl:${IMG_VERSION}
