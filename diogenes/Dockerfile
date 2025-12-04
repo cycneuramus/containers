@@ -1,6 +1,6 @@
-ARG IMG_VERSION=5.43.5-slim-trixie
+ARG BASE_IMAGE=docker.io/perl:5.43.5-slim-trixie
 
-FROM docker.io/perl:${IMG_VERSION} AS build
+FROM ${BASE_IMAGE} AS build
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG REPO=https://github.com/cycneuramus/diogenes
@@ -16,7 +16,7 @@ RUN git clone --depth 1 --branch "$BRANCH" "$REPO" . \
     && make -f mk.prebuilt-data \
     && make
 
-FROM perl:${IMG_VERSION}
+FROM ${BASE_IMAGE}
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG USER=diogenes
