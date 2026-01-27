@@ -3,7 +3,7 @@ ARG debian_version=trixie
 
 FROM python:${python_version}-slim-${debian_version}
 
-ARG signalbot_version=0.21.0
+ARG signalbot_version=0.22.0
 ARG supercronic_version=v0.2.34
 ARG supercronic_sha=e8631edc1775000d119b70fd40339a7238eece14
 
