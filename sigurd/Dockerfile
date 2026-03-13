@@ -41,7 +41,6 @@ RUN pip install --no-cache-dir \
 	lyricsgenius \
 	pydub \
 	signalbot==${signalbot_version} \
-	tekore \
 	tinydb
 
 WORKDIR $BOT_DIR
