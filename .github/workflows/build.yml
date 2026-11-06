@@ -17,7 +17,7 @@ jobs:
       apps_to_build: ${{ steps.detect.outputs.apps_to_build }}
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           # Fetch the current and previous commit to ensure `github.event.before` is available
           fetch-depth: 2
