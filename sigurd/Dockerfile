@@ -3,7 +3,7 @@ ARG debian_version=trixie
 
 FROM python:${python_version}-slim-${debian_version}
 
-ARG signalbot_version=1.2.2
+ARG signalbot_version=2.2.1
 ARG supercronic_version=v0.2.34
 ARG supercronic_sha=e8631edc1775000d119b70fd40339a7238eece14
 
@@ -38,7 +38,6 @@ ENV PYTHONPATH=$BOT_DIR
 
 RUN pip install --no-cache-dir \
     audioop-lts \
-	lyricsgenius \
 	pydub \
 	signalbot==${signalbot_version} \
 	tinydb
