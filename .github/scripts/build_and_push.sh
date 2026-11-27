@@ -26,6 +26,6 @@ for app in "${apps[@]}"; do
 		--platform linux/amd64,linux/arm64 \
 		--push \
 		--tag "${REPO}:${app}" \
-		--tag "${REPO}:${app}-${version}" \
+		--tag "${REPO}:${version}-${app}" \
 		"$app"
 done

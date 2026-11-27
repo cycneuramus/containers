@@ -39,6 +39,7 @@ ENV PYTHONPATH=$BOT_DIR
 RUN pip install --no-cache-dir \
     audioop-lts \
 	pydub \
+    requests \
 	signalbot==${signalbot_version} \
 	tinydb
 
